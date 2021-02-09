@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Scrollspy from 'react-scrollspy';
 import Scroll from './Scroll';
 
-import avatar from '../assets/images/avatar.png';
+import avatar from '../assets/images/rafael.png';
 import config from '../../config';
 
 export class Sidebar extends Component {
@@ -15,7 +15,7 @@ export class Sidebar extends Component {
         { content: 'Formação', href: 'education' },
         { content: 'Skills', href: 'skills' },
         { content: 'Interesses', href: 'interests' },
-        { content: 'Cursos', href: 'awards' },
+        { content: 'Dicas', href: 'recommendations' },
       ],
       isCollapsed: true,
     };

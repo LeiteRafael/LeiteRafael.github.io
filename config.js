@@ -21,6 +21,11 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://linkedin.com/in/rafanleite',
     },
+    {
+      icon: 'fa-youtube',
+      name: 'Youtube',
+      url: 'https://www.youtube.com/channel/UCQPgNwAjYG4xudPQPeZr_Jg',
+    }
   ],
   email: 'rafanleite@gmail.com',
   address: 'Porto Alegre, Brasil',

@@ -2,9 +2,14 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 
+
 // import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
+const configIcons = {
+  "color": "#3b434d",
+  "padding-right": "10px"
+};
 const IndexPage = () => (
   <Layout>
     <Sidebar />
@@ -18,11 +23,21 @@ const IndexPage = () => (
             {config.firstName} {config.lastName}
           </h1>
           <div className="subheading mb-5">
-            {config.address}
-            <a href={`mailto:${config.email}`}>{config.email}</a>
+            <ul className="fa-ul mb-0">
+              <li>
+                <i className="fa-li fa fa-map-marker-alt"></i>
+                {config.address}
+              </li>
+              <li>
+                <i className="fa-li fa fa-envelope"></i>
+                <a href={`mailto:${config.email}`}>{config.email}</a>
+              </li>
+            </ul>
           </div>
           <p className="lead mb-5">
-            ----
+              Estudante de Ciência da computação. Backend Developer(Nodejs e Java), 
+              com experiência em APIs REST/RESTful e microserviços. Entusiasta pela computação 
+              e suas tecnologias.
           </p>
           <div className="social-icons">
             {config.socialLinks.map(social => {
@@ -148,29 +163,43 @@ const IndexPage = () => (
             Code
           </div>
           <ul className="list-inline dev-icons">
-            <li className="list-inline-item">
-              <i className="fab fa-java"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-node"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-c"></i>
-              <li className="list-inline-item">
-                <i className="fab fa-npm"></i>
-              </li>
-            </li>
+            <i class="devicon-nodejs-plain-wordmark" style={configIcons}></i>
+            <i class="devicon-java-plain-wordmark colored" style={configIcons}></i>
+            <i class="devicon-c-plain-wordmark colored" style={configIcons}></i>
           </ul>
-
           <div className="subheading mb-3">
-            Tools
+            Database
           </div>
           <ul className="list-inline dev-icons">
-            <li className="list-inline-item">
-              <i className="fab fa-docker"></i>
+            <i class="devicon-mongodb-plain-wordmark" style={configIcons}></i>
+            <i class="devicon-mysql-plain-wordmark colored" style={configIcons}></i>
+            <i class="devicon-postgresql-plain-wordmark colored" style={configIcons}></i>
+          </ul>
+          <div className="subheading mb-3">
+            Tools &amp; Frameworks
+          </div>
+          <ul className="list-inline dev-icons">
+            <i class="devicon-git-plain-wordmark colored" style={configIcons}></i>
+            <i class="devicon-docker-plain colored" style={configIcons}></i>
+            <i class="devicon-npm-original-wordmark colored" style={configIcons}></i>
+            <i class="devicon-express-original-wordmark colored" style={configIcons}></i>
+            <i class="devicon-mocha-plain colored" style={configIcons}></i>
+            <i class="icon-spring" style={configIcons}></i>
+          </ul>
+
+          <div className="subheading mb-3">Cloud</div>
+          <ul className="fa-ul mb-0">
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              AWS
             </li>
-            <li className="list-inline-item">
-              <i className="fab fa-azure"></i>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Azure
+            </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Heroku
             </li>
           </ul>
 
@@ -178,19 +207,11 @@ const IndexPage = () => (
           <ul className="fa-ul mb-0">
             <li>
               <i className="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design
-            </li>
-            <li>
-              <i className="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging
-            </li>
-            <li>
-              <i className="fa-li fa fa-check"></i>
-              Cross Functional Teams
-            </li>
-            <li>
-              <i className="fa-li fa fa-check"></i>
               Agile Development &amp; Scrum
+            </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Kanban
             </li>
           </ul>
         </div>
@@ -203,10 +224,33 @@ const IndexPage = () => (
         id="interests"
       >
         <div className="w-100">
-          <h2 className="mb-5">Interests</h2>
-          <p>
-          ---
-          </p>
+          <h2 className="mb-5">Interesses</h2>
+          <ul className="fa-ul mb-0">
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Clean Code
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Clean Architecture
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              SOLID
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Design Patterns
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Domain-driven design
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              TDD &amp; BDD
+          </li>
+          </ul>
         </div>
       </section>
 
@@ -214,15 +258,34 @@ const IndexPage = () => (
 
       <section
         className="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="awards"
+        id="recommendations"
       >
         <div className="w-100">
-          <h2 className="mb-5">Awards &amp; Certifications</h2>
+          <h2 className="mb-5">Dicas de livros e cursos</h2>
           <ul className="fa-ul mb-0">
             <li>
-              <i className="fa-li fa fa-trophy text-warning"></i>
-              -----
+              <i className="fa-li fa fa-check"></i>
             </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Clean Architecture
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              SOLID
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Design Patterns
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              Domain-driven design
+          </li>
+            <li>
+              <i className="fa-li fa fa-check"></i>
+              TDD &amp; BDD
+          </li>
           </ul>
         </div>
       </section>
