@@ -7,7 +7,6 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/LeiteRafael.github.io/`, // This path is subpath of your hosting https://domain/portfolio
   firstName: 'Rafael ',
   lastName: 'Leite',
   // social
